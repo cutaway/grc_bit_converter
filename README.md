@@ -8,6 +8,11 @@ GRC Bit Converter (grc_bit_converter.py) is a python script for parsing and prin
 * Start Date: May 15, 2014
 * Contributers: Be the first
 
+## Requirements:
+
+* [Python BitArray](https://pypi.python.org/pypi/bitarray) -  Version 0.8
+** Ubuntu may try to install a really old version of BitArray. Don't be fooled, it will not work.
+
 ## Usage:
 
 ```
@@ -21,10 +26,36 @@ grc_bit_converter.py:
     -b <number>:     Bypass this number of BITS. NOTE: only used for non-coded parsing."
 ```
 
-## Requirements:
+## Example:
+The following is an example of parsing captured data as outlined in [Converting Radio Signals to Data Packets](http://www.inguardians.com/pubs/GRC_signal_analysis_InGuardians_v1.pdf).
 
-* [Python BitArray](https://pypi.python.org/pypi/bitarray) -  Version 0.8
-** Ubuntu may try to install a really old version of BitArray. Don't be fooled, it will not work.
+```
+cutaway> python ~/InG-Storage/Research/Dev/grc_bit_converter/grc_bit_converter.py -c -p 18 -f blog_demod_1e6_905.99e6_gfsk_76721_lfp_hackrf_coded.dat
+Starting Packet Parsing.
+
+New Packet: 0
+Size: 17
+Occurances: 1
+xV4H��� U��;
+
+\x0f\x78\x56\x34\x10\x48\xb9\xcc\xf7\x20\x03\x55\x01\x1d\xea\xff\x3b
+
+New Packet: 1
+Size: 17
+Occurances: 1
+xV4H��� V!��▒
+
+\x0f\x78\x56\x34\x10\x48\xb9\xcc\xf7\x20\x03\x56\x01\x21\xe5\xfa\x1a
+
+New Packet: 2
+Size: 17
+Occurances: 1
+xV4H��� W)��
+
+\x0f\x78\x56\x34\x10\x48\xb9\xcc\xf7\x20\x03\x57\x01\x29\xe0\xf3\x04
+
+
+```
 
 ## Todo: 
 * modualize for use in other scripts
