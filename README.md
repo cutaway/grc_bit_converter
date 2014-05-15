@@ -3,10 +3,10 @@ GRC Bit Converter
 
 GRC Bit Converter (grc_bit_converter.py) is a python script for parsing and printing data produced by [GNU-Radio Companion](http://gnuradio.org/redmine/projects/gnuradio/wiki/GNURadioCompanion)'s Clock Recovery MM and Binary Slicer blocks. This script takes a file with bits represented as bytes (a 0 represented as 0x00 and a 1 represented as 0x01) and combines them into their intended byte representation. Once combined the script provides several capabilities for packetizing, inverting, shifting, identify Correlated Access Encoded packets, and searching the data.
 
-Author: Don C. Weber (cutaway) - [@cutaway](http://twitter.com/cutaway)
-Company: [InGuardians, Inc.](http://inguardians.com)
-Start Date: May 15, 2014
-Contributers: Be the first
+* Author: Don C. Weber (cutaway) - [@cutaway](http://twitter.com/cutaway)
+* Company: [InGuardians, Inc.](http://inguardians.com)
+* Start Date: May 15, 2014
+* Contributers: Be the first
 
 ## Usage:
 
@@ -20,6 +20,11 @@ grc_bit_converter.py:
     -c:              Data is coded. Therefore look for 2's and 3's as packet markers."
     -b <number>:     Bypass this number of BITS. NOTE: only used for non-coded parsing."
 ```
+
+## Requirements:
+
+* [Python BitArray](https://pypi.python.org/pypi/bitarray) -  Version 0.8
+** Ubuntu may try to install a really old version of BitArray. Don't be fooled, it will not work.
 
 ## Todo: 
 * modualize for use in other scripts
