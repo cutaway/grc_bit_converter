@@ -11,7 +11,7 @@ GRC Bit Converter (grc_bit_converter.py) is a python script for parsing and prin
 ## Requirements:
 
 * [Python BitArray](https://pypi.python.org/pypi/bitarray) -  Version 0.8
-** Ubuntu may try to install a really old version of BitArray. Don't be fooled, it will not work.
+    * Ubuntu may try to install a really old version of BitArray. Don't be fooled, it will not work.
 
 ## Usage:
 
